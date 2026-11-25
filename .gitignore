@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+.venv/
+venv/
+
+# Pytest
+.pytest_cache/
+
+# Playwright MCP
+.playwright-mcp/
+
+# Reports
+reports/*
+!reports/.gitkeep
+
+# Screenshots
+screenshots/*
+!screenshots/.gitkeep
+
+# Environment Variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
