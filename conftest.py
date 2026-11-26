@@ -39,6 +39,15 @@ def pytest_runtest_makereport(item, call):
 def login_page(page):
     page.goto(
         BASE_URL + "/web/index.php/auth/login",
-        wait_until="domcontentloaded"
+        wait_until="commit",
+        timeout=60000
     )
-    return LoginPage(page)
+
+    login_page = LoginPage(page)
+
+    login_page.username_input.wait_for(
+        state="visible",
+        timeout=30000
+    )
+
+    return login_page
